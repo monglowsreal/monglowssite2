@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Instrument+Serif:italic&family=Sora:wght@100..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-ghost font-sans overflow-x-hidden antialiased;
+  }
+}
+
+@layer utilities {
+  .noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.05;
+  }
+}
