@@ -39,7 +39,7 @@ export default function Footer() {
 
         {/* Contact Form */}
         <form 
-          action="https://formsubmit.co/tahirkemalsariyildiz.32@gmail.com" 
+          action="https://formspree.io/f/mzdlzgpn" 
           method="POST" 
           className="w-full max-w-md flex flex-col gap-4 mb-8"
         >
