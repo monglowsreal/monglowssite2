@@ -27,7 +27,7 @@ export default function Navbar() {
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
       <nav ref={navRef} className="flex items-center justify-between px-6 py-3 rounded-full w-full max-w-5xl transition-all duration-300 border border-transparent text-ghost">
         <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo(0, 0); }} className="flex items-center">
-          <img src="/tks_logo.png" alt="TKS Logo" className="h-8 object-contain hover:scale-105 transition-transform duration-300" />
+          <img src="/tks_logo.png" alt="TKS Logo" className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover hover:scale-105 transition-transform duration-300" />
         </a>
         
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
