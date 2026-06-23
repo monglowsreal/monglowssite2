@@ -7,6 +7,7 @@ import Projects from './components/Projects'
 import Philosophy from './components/Philosophy'
 import Protocol from './components/Protocol'
 import Footer from './components/Footer'
+import Chatbot from './components/Chatbot'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Philosophy />
         <Protocol />
         <Footer />
+        <Chatbot />
       </main>
     </LanguageProvider>
   )
