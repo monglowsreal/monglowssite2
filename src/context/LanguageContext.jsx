@@ -58,7 +58,13 @@ const dictionary = {
     footDesc: 'Open a direct channel to discuss how AI can transform your business. Reach out via email, phone, or social media.',
     footBtn: 'Start a Project',
     footRole: 'AI Expert & App Developer',
-    footStatus: 'Ready for Deployment'
+    footStatus: 'Ready for Deployment',
+    
+    // Form
+    formName: 'Your Name',
+    formEmail: 'Your Email',
+    formMessage: 'How can I help you?',
+    formSubmit: 'Send Message'
   },
   tr: {
     // Navbar
@@ -117,7 +123,13 @@ const dictionary = {
     footDesc: 'Yapay zekanın işletmenizi nasıl dönüştürebileceğini tartışmak için doğrudan bir iletişim kanalı açın. Telefon, e-posta veya sosyal medya üzerinden ulaşabilirsiniz.',
     footBtn: 'Projeyi Başlat',
     footRole: 'Yapay Zeka Uzmanı & Geliştirici',
-    footStatus: 'Geliştirmeye Hazır'
+    footStatus: 'Geliştirmeye Hazır',
+
+    // Form
+    formName: 'Adınız',
+    formEmail: 'E-posta Adresiniz',
+    formMessage: 'Size nasıl yardımcı olabilirim?',
+    formSubmit: 'Mesaj Gönder'
   }
 };
 
