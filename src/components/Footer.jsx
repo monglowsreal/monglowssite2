@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Phone, Mail, Instagram } from 'lucide-react';
+import { Phone, Mail, AtSign } from 'lucide-react';
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -50,7 +50,7 @@ export default function Footer() {
             tahirkemalsariyildiz.32@gmail.com
           </a>
           <a href="https://instagram.com/tahirkemalsariyildiz" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors flex items-center gap-2">
-            <Instagram size={16} />
+            <AtSign size={16} />
             Instagram
           </a>
         </div>
