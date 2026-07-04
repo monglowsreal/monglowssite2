@@ -18,7 +18,7 @@ export default function Chatbot() {
           role: 'assistant', 
           content: lang === 'en' 
             ? "Hello! I'm Tahir's AI assistant. Feel free to ask me anything about his work, experience, or background!"
-            : "Merhaba! Ben Tahir'in yapay zeka asistanıyım. Tahir'in işleri, tecrübesi veya geçmişi hakkında bana her şeyi sorabilirsiniz!" 
+            : "Merhaba ben Tahir Kemal Sarıyıldız'ın kişisel yapay zeka asistanıyım. Tahir'in işleri, tecrübesi veya geçmişi hakkında bana her şeyi sorabilirsiniz!" 
         }
       ]);
     }
