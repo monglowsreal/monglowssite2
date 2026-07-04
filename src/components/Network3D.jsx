@@ -19,15 +19,15 @@ function LiquidBrain(props) {
   });
 
   return (
-    <Sphere ref={meshRef} args={[1.5, 64, 64]} {...props}>
+    <Sphere ref={meshRef} args={[2.5, 64, 64]} {...props}>
       <MeshDistortMaterial
-        color="#8B5CF6"
+        color="#A78BFA" // Lighter, brighter purple for better visibility
         attach="material"
-        distort={0.4} // Amount of distortion
-        speed={2} // Speed of the morphing animation
-        roughness={0.2}
-        metalness={0.8}
-        wireframe={true} // Wireframe gives it a highly technical/AI look
+        distort={0.4} 
+        speed={2} 
+        roughness={0.1}
+        metalness={1}
+        wireframe={true} 
       />
     </Sphere>
   );
@@ -35,14 +35,14 @@ function LiquidBrain(props) {
 
 export default function Network3D() {
   return (
-    <div className="absolute inset-0 w-full h-full z-0 opacity-40 mix-blend-screen pointer-events-auto">
+    <div className="absolute inset-0 w-full h-full z-0 opacity-80 mix-blend-screen pointer-events-auto">
       <Canvas 
-        camera={{ position: [0, 0, 4] }} 
+        camera={{ position: [0, 0, 5] }} 
         dpr={[1, 2]} 
       >
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[10, 10, 10]} intensity={1} color="#8B5CF6" />
-        <directionalLight position={[-10, -10, -10]} intensity={0.5} color="#10B981" />
+        <ambientLight intensity={1.5} />
+        <directionalLight position={[10, 10, 10]} intensity={3} color="#C4B5FD" />
+        <directionalLight position={[-10, -10, -10]} intensity={1.5} color="#34D399" />
         <LiquidBrain />
       </Canvas>
     </div>
