@@ -88,7 +88,7 @@ export default function Footer() {
             <Mail size={16} />
             tahirkemalsariyildiz.32@gmail.com
           </a>
-          <a href="https://instagram.com/tahirkemalsariyildiz" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors flex items-center gap-2">
+          <a href="https://instagram.com/monglowsreal" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors flex items-center gap-2">
             <AtSign size={16} />
             Instagram
           </a>
