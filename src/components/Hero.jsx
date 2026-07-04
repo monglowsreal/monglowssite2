@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { useLanguage } from '../context/LanguageContext';
-import Network3D from './Network3D';
 
 export default function Hero() {
   const containerRef = useRef(null);
@@ -30,8 +29,16 @@ export default function Hero() {
 
   return (
     <section ref={containerRef} className="relative w-full h-[100dvh] flex flex-col justify-end p-8 md:p-16 overflow-hidden">
-      {/* 3D Network Background */}
-      <Network3D />
+      {/* Background Video */}
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline 
+        className="absolute inset-0 z-0 w-full h-full object-cover opacity-40 mix-blend-screen"
+      >
+        <source src="/core.mp4" type="video/mp4" />
+      </video>
       <div className="absolute inset-0 z-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
       
       <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-start gap-6">
