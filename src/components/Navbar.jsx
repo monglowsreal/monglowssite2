@@ -30,11 +30,23 @@ export default function Navbar() {
           <img src="/tks_logo.png" alt="TKS Logo" className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover hover:scale-105 transition-transform duration-300" />
         </a>
         
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="#features" className="hover:-translate-y-[1px] transition-transform">{t('navFeatures')}</a>
-          <a href="#projects" className="hover:-translate-y-[1px] transition-transform">{t('navProjects')}</a>
-          <a href="#philosophy" className="hover:-translate-y-[1px] transition-transform">{t('navPhilosophy')}</a>
-          <a href="#protocol" className="hover:-translate-y-[1px] transition-transform">{t('navProtocol')}</a>
+        <div className="hidden md:flex items-center gap-3 text-sm font-medium">
+          <a href="#features" className="relative px-5 py-2 rounded-full overflow-hidden group border border-ghost/10 hover:border-accent transition-colors duration-300">
+            <span className="relative z-10 group-hover:text-background transition-colors duration-300">{t('navFeatures')}</span>
+            <div className="absolute inset-0 bg-accent translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
+          </a>
+          <a href="#projects" className="relative px-5 py-2 rounded-full overflow-hidden group border border-ghost/10 hover:border-accent transition-colors duration-300">
+            <span className="relative z-10 group-hover:text-background transition-colors duration-300">{t('navProjects')}</span>
+            <div className="absolute inset-0 bg-accent translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
+          </a>
+          <a href="#philosophy" className="relative px-5 py-2 rounded-full overflow-hidden group border border-ghost/10 hover:border-accent transition-colors duration-300">
+            <span className="relative z-10 group-hover:text-background transition-colors duration-300">{t('navPhilosophy')}</span>
+            <div className="absolute inset-0 bg-accent translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
+          </a>
+          <a href="#protocol" className="relative px-5 py-2 rounded-full overflow-hidden group border border-ghost/10 hover:border-accent transition-colors duration-300">
+            <span className="relative z-10 group-hover:text-background transition-colors duration-300">{t('navProtocol')}</span>
+            <div className="absolute inset-0 bg-accent translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
+          </a>
         </div>
 
         <div className="flex items-center gap-4">
