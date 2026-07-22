@@ -12,16 +12,6 @@ export default function Protocol() {
   useEffect(() => {
     let ctx = gsap.context(() => {
       const cards = gsap.utils.toArray('.protocol-card');
-      
-      cards.forEach((card, i) => {
-        ScrollTrigger.create({
-          trigger: card,
-          start: 'top top',
-          pin: true,
-          pinSpacing: false,
-          end: 'max'
-        });
-      });
 
       cards.forEach((card, i) => {
         if (i === cards.length - 1) return;
@@ -75,7 +65,7 @@ export default function Protocol() {
 function Card({ index, title, desc, bg, Visual, zIndex }) {
   return (
     <div 
-      className={`protocol-card relative w-full h-[100dvh] ${bg} flex flex-col md:flex-row items-center justify-center p-8 md:p-24 overflow-hidden border-t border-ghost/5`}
+      className={`protocol-card sticky top-0 w-full h-[100dvh] ${bg} flex flex-col md:flex-row items-center justify-center p-8 md:p-24 overflow-hidden border-t border-ghost/5`}
       style={{ zIndex }}
     >
       <div className="flex-1 flex flex-col justify-center max-w-xl z-10">
