@@ -20,7 +20,7 @@ export default function Protocol() {
         index="01" 
         title={t('protCard1Title')} 
         desc={t('protCard1Desc')} 
-        bg="bg-[#0A0A14]"
+        bg="#0A0A14"
         Visual={SvgHelix}
         zIndex={10}
       />
@@ -28,7 +28,7 @@ export default function Protocol() {
         index="02" 
         title={t('protCard2Title')} 
         desc={t('protCard2Desc')} 
-        bg="bg-[#0F0F1A]"
+        bg="#0F0F1A"
         Visual={SvgLaserGrid}
         zIndex={20}
       />
@@ -36,7 +36,7 @@ export default function Protocol() {
         index="03" 
         title={t('protCard3Title')} 
         desc={t('protCard3Desc')} 
-        bg="bg-[#141422]"
+        bg="#141422"
         Visual={SvgWaveform}
         zIndex={30}
       />
@@ -47,8 +47,8 @@ export default function Protocol() {
 function Card({ index, title, desc, bg, Visual, zIndex }) {
   return (
     <div 
-      className={`protocol-card sticky top-0 w-full h-[100dvh] ${bg} flex flex-col md:flex-row items-center justify-center p-8 md:p-24 overflow-hidden border-t border-ghost/5`}
-      style={{ zIndex }}
+      className={`protocol-card sticky top-0 w-full h-[100dvh] flex flex-col md:flex-row items-center justify-center p-8 md:p-24 overflow-hidden border-t border-ghost/5`}
+      style={{ backgroundColor: bg, zIndex }}
     >
       <div className="flex-1 flex flex-col justify-center max-w-xl z-10">
         <span className="font-mono text-accent text-lg mb-4">[{index}]</span>
