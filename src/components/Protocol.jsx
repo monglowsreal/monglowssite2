@@ -10,26 +10,8 @@ export default function Protocol() {
   const { t } = useLanguage();
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
-      const cards = gsap.utils.toArray('.protocol-card');
-
-      cards.forEach((card, i) => {
-        if (i === cards.length - 1) return;
-        gsap.to(card, {
-          scale: 0.9,
-          filter: 'blur(20px)',
-          opacity: 0.5,
-          scrollTrigger: {
-            trigger: cards[i + 1],
-            start: 'top bottom',
-            end: 'top top',
-            scrub: true,
-          }
-        });
-      });
-
-    }, containerRef);
-    return () => ctx.revert();
+    // CSS sticky top-0 handles the card stacking naturally.
+    // No GSAP scroll animations needed to avoid unwanted blurring.
   }, []);
 
   return (
