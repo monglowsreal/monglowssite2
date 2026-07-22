@@ -14,7 +14,7 @@ export default function Philosophy() {
       gsap.from('.phil-line', {
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top 70%',
+          start: 'top 95%',
         },
         y: 40,
         opacity: 0,
