@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { LanguageProvider } from './context/LanguageContext'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Features from './components/Features'
-import Projects from './components/Projects'
-import Philosophy from './components/Philosophy'
-import Protocol from './components/Protocol'
-import Footer from './components/Footer'
 import Chatbot from './components/Chatbot'
+
+// Pages
+import Home from './pages/Home'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsOfUse from './pages/TermsOfUse'
 
 function App() {
   useEffect(() => {
@@ -21,13 +20,15 @@ function App() {
   return (
     <LanguageProvider>
       <main className="w-full min-h-screen bg-background">
-        <Navbar />
-        <Hero />
-        <Features />
-        <Projects />
-        <Philosophy />
-        <Protocol />
-        <Footer />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/gizlilik-politikasi" element={<PrivacyPolicy />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/kullanim-kosullari" element={<TermsOfUse />} />
+            <Route path="/terms" element={<TermsOfUse />} />
+          </Routes>
+        </BrowserRouter>
         <Chatbot />
       </main>
     </LanguageProvider>

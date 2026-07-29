@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { Phone, Mail, AtSign } from 'lucide-react';
 
@@ -74,6 +75,13 @@ export default function Footer() {
             <span className="relative z-10">{t('formSubmit')}</span>
             <div className="absolute inset-0 bg-ghost translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 z-0"></div>
           </button>
+          <p className="text-xs text-ghost/40 text-center mt-2 px-4 leading-relaxed font-mono">
+            {t('formConsentPrefix')}
+            <Link to="/gizlilik-politikasi" className="text-accent hover:underline">
+              {t('privacyPolicy')}
+            </Link>
+            .
+          </p>
         </form>
       </div>
 
@@ -92,6 +100,16 @@ export default function Footer() {
             <AtSign size={16} />
             Instagram
           </a>
+        </div>
+        
+        <div className="flex flex-col md:flex-row items-center gap-4 text-xs font-mono text-ghost/40">
+          <Link to="/gizlilik-politikasi" className="hover:text-accent transition-colors">
+            {t('privacyPolicy')}
+          </Link>
+          <span className="hidden md:inline">•</span>
+          <Link to="/kullanim-kosullari" className="hover:text-accent transition-colors">
+            {t('termsOfUse')}
+          </Link>
         </div>
 
         <div className="flex items-center gap-3 bg-background/50 px-4 py-2 rounded-full border border-ghost/10">

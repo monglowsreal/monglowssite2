@@ -64,7 +64,12 @@ const dictionary = {
     formName: 'Your Name',
     formEmail: 'Your Email',
     formMessage: 'How can I help you?',
-    formSubmit: 'Send Message'
+    formSubmit: 'Send Message',
+    formConsentPrefix: 'By submitting this form, you declare that you have read and accepted the ',
+    
+    // Legal
+    privacyPolicy: 'Privacy Policy',
+    termsOfUse: 'Terms of Use'
   },
   tr: {
     // Navbar
@@ -129,7 +134,12 @@ const dictionary = {
     formName: 'Adınız',
     formEmail: 'E-posta Adresiniz',
     formMessage: 'Size nasıl yardımcı olabilirim?',
-    formSubmit: 'Mesaj Gönder'
+    formSubmit: 'Mesaj Gönder',
+    formConsentPrefix: 'Bu formu göndererek okuduğunuzu ve kabul ettiğinizi beyan etmiş olursunuz: ',
+    
+    // Legal
+    privacyPolicy: 'Gizlilik Politikası',
+    termsOfUse: 'Kullanım Koşulları'
   }
 };
 
