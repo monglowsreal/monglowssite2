@@ -2,21 +2,29 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLanguage } from '../context/LanguageContext';
+import { Link, useLocation } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Navbar() {
   const navRef = useRef(null);
   const { lang, setLang, t } = useLanguage();
+  const location = useLocation();
 
   useEffect(() => {
     let ctx = gsap.context(() => {
       ScrollTrigger.create({
         start: 'top -50',
         end: 99999,
-        toggleClass: {
-          targets: navRef.current,
-          className: 'bg-background/80 backdrop-blur-xl border-accent/20 border text-accent'
+        onEnter: () => {
+          if (navRef.current) {
+            navRef.current.classList.add(...('bg-background/80 backdrop-blur-xl border-accent/20 border text-accent'.split(' ')));
+          }
+        },
+        onLeaveBack: () => {
+          if (navRef.current) {
+            navRef.current.classList.remove(...('bg-background/80 backdrop-blur-xl border-accent/20 border text-accent'.split(' ')));
+          }
         }
       });
     });
@@ -26,24 +34,28 @@ export default function Navbar() {
   return (
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
       <nav ref={navRef} className="flex items-center justify-between px-6 py-3 rounded-full w-full max-w-5xl transition-all duration-300 border border-transparent text-ghost">
-        <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo(0, 0); }} className="flex items-center">
+        <Link 
+          to="/" 
+          onClick={() => { if (location.pathname === '/') window.scrollTo(0, 0); }} 
+          className="flex items-center"
+        >
           <img src="/tks_logo.png" alt="TKS Logo" className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover hover:scale-105 transition-transform duration-300" />
-        </a>
+        </Link>
         
         <div className="hidden md:flex items-center gap-3 text-sm font-medium">
-          <a href="#features" className="relative px-5 py-2 rounded-full overflow-hidden group border border-ghost/10 hover:border-accent transition-colors duration-300">
+          <a href="/#features" className="relative px-5 py-2 rounded-full overflow-hidden group border border-ghost/10 hover:border-accent transition-colors duration-300">
             <span className="relative z-10 group-hover:text-background transition-colors duration-300">{t('navFeatures')}</span>
             <div className="absolute inset-0 bg-accent translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
           </a>
-          <a href="#projects" className="relative px-5 py-2 rounded-full overflow-hidden group border border-ghost/10 hover:border-accent transition-colors duration-300">
+          <a href="/#projects" className="relative px-5 py-2 rounded-full overflow-hidden group border border-ghost/10 hover:border-accent transition-colors duration-300">
             <span className="relative z-10 group-hover:text-background transition-colors duration-300">{t('navProjects')}</span>
             <div className="absolute inset-0 bg-accent translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
           </a>
-          <a href="#philosophy" className="relative px-5 py-2 rounded-full overflow-hidden group border border-ghost/10 hover:border-accent transition-colors duration-300">
+          <a href="/#philosophy" className="relative px-5 py-2 rounded-full overflow-hidden group border border-ghost/10 hover:border-accent transition-colors duration-300">
             <span className="relative z-10 group-hover:text-background transition-colors duration-300">{t('navPhilosophy')}</span>
             <div className="absolute inset-0 bg-accent translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
           </a>
-          <a href="#protocol" className="relative px-5 py-2 rounded-full overflow-hidden group border border-ghost/10 hover:border-accent transition-colors duration-300">
+          <a href="/#protocol" className="relative px-5 py-2 rounded-full overflow-hidden group border border-ghost/10 hover:border-accent transition-colors duration-300">
             <span className="relative z-10 group-hover:text-background transition-colors duration-300">{t('navProtocol')}</span>
             <div className="absolute inset-0 bg-accent translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
           </a>
